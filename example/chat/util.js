@@ -24,11 +24,10 @@ function addMsg(that, type, msg, avatar, sugList){
   }
   let newMsg = that.data.msgList;
   newMsg.push(info)
-  console.log(that.data.scrollTop)
   that.setData({
     inputValue: '',
     msgList: newMsg,
-    scrollTop: that.data.scrollTop + 1000
+    scrollTop: that.data.scrollTop + 200
   })
 }
 

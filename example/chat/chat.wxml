@@ -27,7 +27,7 @@
           <view class="b-triangle s-b-triangle"></view>
           <view class="t-triangle s-t-triangle"></view>
          </view>
-         <view class="item-msg">{{item.msg}}</view>
+         <view class="item-msg-self">{{item.msg}}</view>
         </view>
       </view>
     </scroll-view>

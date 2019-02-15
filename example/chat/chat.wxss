@@ -32,6 +32,16 @@
     flex-direction: column;
     align-items: center;
 }
+.item-msg-self{
+    padding: 10px;
+    background-color:  #83F256;
+    max-width: 70%;
+    border: .2px solid #e2e2e2;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .avatar {
     width: 40px;
@@ -83,7 +93,7 @@
     border-width: 7px;
     left: -1px;
     top: 11px;
-    border-color: transparent transparent transparent #fff;
+    border-color: transparent transparent transparent #83F256;
 }
 
 .msg-input {
