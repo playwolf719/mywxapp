@@ -1,18 +1,24 @@
+
+const app = getApp()
 Page({
   data: {
     list: [
       {
-        id: 'intro',
-        name: '商会问答',
+        id: 'chat',
+        name: '问答',
         open: false,
-        pages: ['button', 'list', 'input', 'slider', 'uploader'],
         img_url: 'images/icon_intro.png'
       },
       {
-        id: 'intro',
-        name: '相关机构列表',
+        id: 'org_list',
+        name: '列表1',
         open: false,
-        pages: ['button', 'list', 'input', 'slider', 'uploader'],
+        img_url: 'images/icon_nav_form.png'
+      },
+      {
+        id: 'mem_list',
+        name: '列表2',
+        open: false,
         img_url: 'images/icon_nav_form.png'
       }
     ]

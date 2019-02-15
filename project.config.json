@@ -12,13 +12,13 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.5.2",
-	"appid": "wx28bea914ced1ec84",
-	"projectname": "miniprogram-test-4",
+	"libVersion": "2.6.0",
+	"appid": "wx5c658390c13cfbf2",
+	"projectname": "mywxapp",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
-	"isGameTourist": false,
+	"scripts": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -28,8 +28,11 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
-			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
