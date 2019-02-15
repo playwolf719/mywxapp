@@ -27,7 +27,7 @@ function addMsg(that, type, msg, avatar, sugList){
   that.setData({
     inputValue: '',
     msgList: newMsg,
-    scrollTop: that.data.scrollTop + 200
+    scrollTop: that.data.scrollTop + 1000
   })
 }
 

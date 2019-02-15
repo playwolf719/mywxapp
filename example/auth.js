@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    motto: '欢迎',
+    motto: '这里是商会小程序',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -47,7 +47,14 @@ Page({
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
-      hasUserInfo: true
+      hasUserInfo: true,
+      motto:"欢迎进入小程序"
     })
+    setTimeout(function () {
+      //要延时执行的代码
+      wx.navigateTo({
+        url: 'index'
+      })
+    }, 500)
   }
 })
