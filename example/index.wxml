@@ -18,7 +18,10 @@
             </block>
         </view>
     </view>
-    <view class="page__ft">
-      有问题请联系playwolf719@163.com
+    <view class="weui-footer weui-footer_fixed-bottom">
+        <!-- <view class="weui-footer__links">
+            <navigator url="" class="weui-footer__link">WeUI首页</navigator>
+        </view> -->
+        <view class="weui-footer__text">Copyright © playwolf719</view>
     </view>
 </view>

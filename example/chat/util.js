@@ -15,19 +15,21 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
-function addMsg(that, type, msg, avatar, sugList){
+function addMsg(that, type, msg, avatar, sugList=[], relTitle="常见问题"){
   let info = {
     "type": type,
     "msg": msg,
     "avatar": avatar,
-    "sugList": sugList
+    "sugList": sugList,
+    "relTitle": relTitle
   }
   let newMsg = that.data.msgList;
   newMsg.push(info)
   that.setData({
     inputValue: '',
     msgList: newMsg,
-    scrollTop: that.data.scrollTop + 1000
+    scrollTop: that.data.scrollTop + 1000,
+    autowordList:[]
   })
 }
 

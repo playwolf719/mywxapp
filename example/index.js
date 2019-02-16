@@ -10,17 +10,17 @@ Page({
         img_url: 'images/icon_intro.png'
       },
       {
-        id: 'org_list',
-        name: '列表1',
+        id: 'mem',
+        name: '成员列表',
         open: false,
         img_url: 'images/icon_nav_form.png'
       },
       {
-        id: 'mem_list',
-        name: '列表2',
+        id: 'org_list',
+        name: '机构列表',
         open: false,
         img_url: 'images/icon_nav_form.png'
-      }
+      },
     ]
   },
   kindToggle: function (e) {

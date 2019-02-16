@@ -11,7 +11,7 @@
          <view>
           <view class="item-msg">
             <view>{{item.msg}}</view>
-            <view wx:if="{{item.sugList.length> 0}}"  class="weui-cells__title">常见问题</view>
+            <view wx:if="{{item.sugList.length> 0}}"  class="weui-cells__title">{{item.relTitle}}</view>
             <view class="weui-cells weui-cells_after-title" wx:if="{{item.sugList.length> 0}}" >
               <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{item.sugList}}" wx:for-item="sug"  wx:key="$index">
                   <view class="weui-cell__bd" bindtap="theClick" data-sug="{{sug}}" >{{sug}}</view>
@@ -31,7 +31,17 @@
         </view>
       </view>
     </scroll-view>
+    
+    
+
     <view class="msg-input">
+      <view class="search-hi" >
+        <block wx:if="{{autowordList.length > 0}}">
+          <view class="search-hi-item" wx:for="{{autowordList}}" wx:key="unique">
+            <text class="hi-text" data-key="{{item}}" bindtap="autowordClick">{{item}}</text>
+          </view>
+        </block>
+      </view>
       <input class="send-input" auto-focus bindinput="msgContent" value="{{inputValue}}"/>
       <button class="send-btn" bindtap="sendMsg">发送</button>
     </view>

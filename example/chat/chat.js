@@ -10,6 +10,7 @@ Page({
   data: {
     msgList:[
     ],
+    autowordList: [],
     inputValue: '',
     scrollTop: 600
   },
@@ -54,17 +55,52 @@ url:app.globalData.url_pre+'/often_question',
       }
     })
   },
-  msgContent: function (e) {
-    this.setData({
-      inputValue: e.detail.value
+  autowordClick:function(e){
+    let key = e.currentTarget.dataset.key;
+    let that = this;
+    let userInfo = app.globalData.userInfo
+    util.addMsg(that, "self", key, userInfo.avatarUrl)
+    wx.request({
+      url: app.globalData.url_pre + '/query',
+      data: {
+        q: key
+      },
+      success: function (res) {
+        let rd = res.data.data;
+        util.addMsg(that, "club", rd.answer, app.globalData.club_avatar, [])
+      }
     })
+  },
+  msgContent: function (e) {
+    let that = this;
+    let tval = e.detail.value;
+    this.setData({
+      inputValue: tval
+    })
+    if (tval){
+      wx.request({
+        url: app.globalData.url_pre + '/tip',
+        data: {
+          q: e.detail.value
+        },
+        success: function (res) {
+          that.setData({
+            autowordList: res.data.data.tip_list.reverse()
+          })
+        }
+      })                        
+    } else {
+      that.setData({
+        autowordList: []
+      })
+    }
   },
   sendMsg:function(){
     if (this.data.inputValue.length > 0) {
       const inputValue = this.data.inputValue;
       let that = this;
       let userInfo = app.globalData.userInfo
-      util.addMsg(that, "self", inputValue, userInfo.avatarUrl, [])
+      util.addMsg(that, "self", inputValue, userInfo.avatarUrl)
       wx.request({
         url: app.globalData.url_pre + '/query',
         data: {
@@ -72,7 +108,7 @@ url:app.globalData.url_pre+'/often_question',
         },
         success: function (res) {
           let rd = res.data.data;
-          util.addMsg(that, "club", rd.answer, app.globalData.club_avatar, rd.tip_list)
+          util.addMsg(that, "club", rd.answer, app.globalData.club_avatar, rd.tip_list,"猜你想查")
         }
       })
     }

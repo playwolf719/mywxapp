@@ -4,7 +4,8 @@
     "example/index",
     "example/chat/chat",
     "example/org_list/org_list",
-    "example/mem_list/mem_list"
+    "example/mem/mem",
+    "example/mem/one"
   ],
   "window": {
     "navigationBarTextStyle": "black",

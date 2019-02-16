@@ -98,7 +98,7 @@
 
 .msg-input {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     position: fixed;
     bottom: 0;
     background-color: #f8f8f8;
@@ -153,4 +153,24 @@ span {
     border-color: transparent transparent #fff transparent;
     left: 17px;
     top: -25px;
+}
+
+.search-hi-item {
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 2rpx solid #ededed;
+}
+
+
+
+
+.hi-text {
+  position: absolute;
+  left: 40rpx;
+  right: 108rpx;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 32rpx;
 }
