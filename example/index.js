@@ -5,7 +5,7 @@ Page({
     list: [
       {
         id: 'chat',
-        name: '问答',
+        name: '智能问答',
         open: false,
         img_url: 'images/icon_intro.png'
       },

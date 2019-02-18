@@ -10,7 +10,7 @@
         <view class="weui-article__p">
             <!-- <image class="weui-article__img" src="http://upload.jianshu.io/users/upload_avatars/3000049/d1f400dd3af8.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" mode="aspectFit" style="height: 80px" /> -->
             
-                <image src="../images/pic_article.png" style="width:100px; height: 100px;"></image>
+                <image src="https://pub-static.haozhaopian.net/static/web/site/features/cn/crop/images/crop_20a7dc7fbd29d679b456fa0f77bd9525d.jpg" style="width:100px; height: 100px;"></image>
         </view>
         <view class="weui-article__title">介绍</view>
         <view class="weui-article__p">

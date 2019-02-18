@@ -35,26 +35,23 @@ Page({
       wx.getUserInfo({
         success: res => {
           app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
+          // this.setData({
+          //   userInfo: res.userInfo,
+          //   hasUserInfo: true
+          // })
         }
       })
     }
   },
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true,
-      motto:"欢迎进入小程序"
+    // this.setData({
+    //   userInfo: e.detail.userInfo,
+    //   hasUserInfo: true,
+    //   motto:"欢迎进入小程序"
+    // })
+    wx.navigateTo({
+      url: 'index'
     })
-    setTimeout(function () {
-      //要延时执行的代码
-      wx.navigateTo({
-        url: 'index'
-      })
-    }, 500)
   }
 })

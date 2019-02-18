@@ -1,7 +1,7 @@
 <view class="page">
     <view class="page__hd">
-        <view class="page__title">title</view>
-        <view class="page__desc">desc</view>
+        <view class="page__title">乌鲁木齐伊犁商会</view>
+        <view class="page__desc">乌鲁木齐伊犁商会是在乌鲁木齐伊犁籍企业家自愿联合发起成立,经乌鲁木齐市工商联批准、乌鲁木齐市民政局注册登记,依法设立,具有独立法人资格的非营利性社会团体组织,其业务主管部门是乌鲁木齐市工商业联合会。</view>
     </view>
     <view class="page__bd page__bd_spacing">
         <view class="kind-list">
