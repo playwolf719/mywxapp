@@ -1,20 +1,42 @@
 // example/mem/one.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name:""
+    name:"",
+    attrList: [{ key: "name", chi: "姓名" }, { key: "desc", chi: "介绍" },],
+    infoDict:{},
+    hasImg:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      name:options.name
+    let that = this
+    wx.request({
+      url: app.globalData.url_pre + '/ent/query',
+      data: {
+        q: options.name
+      },
+      success: function (res) {
+        let rd = res.data.data;
+        let hasImg = false
+        console.log(rd)
+        if ("img_url" in rd){
+          hasImg = true
+        }
+        that.setData({
+          hasImg: hasImg,
+          name: options.name,
+          infoDict:rd
+        })
+      }
     })
+  
   },
 
   /**
