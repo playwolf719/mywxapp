@@ -1,0 +1,23 @@
+<!--example/org/templ.wxml-->
+<view class="weui-article">
+  <view class="weui-article__h1">{{ infoDict['name'] }}</view>
+  <view class="weui-article__section" wx:if="{{ infoDict['desc'] }}">
+    <view class="weui-article__title">介绍</view>
+    <view class="weui-article__p">
+        {{ infoDict['desc'] }}
+    </view>
+  </view>
+
+  
+  <view class="weui-btn-area" wx:if="{{ infoDict['contact_info'] }}" >
+      <button type="primary" bindtap="open" data-pn="{{ infoDict['contact_info'] }}">联系电话</button>
+  </view>
+
+  
+  <view class="weui-article__section" >
+    <view class="weui-article__title">地址</view>
+    <view class="weui-article__p">
+        {{ infoDict['address'] }}
+    </view>
+  </view>
+</view>

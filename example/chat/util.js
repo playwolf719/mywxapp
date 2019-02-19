@@ -15,7 +15,7 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
-function addMsg(that, type, msg, avatar, sugList=[], relTitle="常见问题"){
+function addMsg(that, type, msg, avatar, sugList=[], relTitle="常见问题（点击发问）"){
   let info = {
     "type": type,
     "msg": msg,

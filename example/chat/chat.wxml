@@ -15,7 +15,6 @@
             <view class="weui-cells weui-cells_after-title" wx:if="{{item.sugList.length> 0}}" >
               <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{item.sugList}}" wx:for-item="sug"  wx:key="$index">
                   <view class="weui-cell__bd" bindtap="theClick" data-sug="{{sug}}" >{{sug}}</view>
-                  <view class="weui-cell__ft weui-cell__ft_in-access"></view>
               </navigator>
             </view>
           </view>

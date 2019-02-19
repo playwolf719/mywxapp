@@ -25,7 +25,6 @@ Page({
       success: function (res) {
         let rd = res.data.data;
         let hasImg = false
-        console.log(rd)
         if ("img_url" in rd){
           hasImg = true
         }

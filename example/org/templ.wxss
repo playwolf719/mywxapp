@@ -1,0 +1,2 @@
+/* example/org/templ.wxss */
+@import "../../style/weui.wxss";

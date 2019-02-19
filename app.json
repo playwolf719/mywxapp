@@ -3,9 +3,10 @@
     "example/auth",
     "example/index",
     "example/chat/chat",
-    "example/org_list/org_list",
     "example/mem/mem",
-    "example/mem/one"
+    "example/mem/one",
+    "example/org/org",
+    "example/org/one"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -19,5 +20,10 @@
     "uploadFile": 10000,
     "downloadFile": 10000
   },
-  "debug": true
+  "debug": true,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
 }

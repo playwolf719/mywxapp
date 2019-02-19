@@ -26,10 +26,10 @@ Page({
    */
   onReady: function () {
     // 设置状态栏标题
-    wx.setNavigationBarTitle({
-      title: "问答",
-      success: function (res) { }
-    })
+    // wx.setNavigationBarTitle({
+    //   title: "智能问答",
+    //   success: function (res) { }
+    // })
     let that = this;
     wx.request({
 url:app.globalData.url_pre+'/often_question',

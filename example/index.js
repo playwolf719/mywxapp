@@ -7,7 +7,7 @@ Page({
         id: 'chat',
         name: '智能问答',
         open: false,
-        img_url: 'images/icon_intro.png'
+        img_url: 'images/icon_nav_search.png'
       },
       {
         id: 'mem',
@@ -16,8 +16,14 @@ Page({
         img_url: 'images/icon_nav_form.png'
       },
       {
-        id: 'org_list',
+        id: 'org',
         name: '机构列表',
+        open: false,
+        img_url: 'images/icon_nav_form.png'
+      },
+      {
+        id: 'help',
+        name: '问题反馈',
         open: false,
         img_url: 'images/icon_nav_form.png'
       },
