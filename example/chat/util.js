@@ -15,7 +15,7 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
-function addMsg(that, type, msg, avatar, sugList=[], relTitle="常见问题（点击发问）"){
+function addMsg(that, type, msg, avatar, sugList=[], relTitle="常见问题（点击发问）",sh=1000){
   let info = {
     "type": type,
     "msg": msg,
@@ -25,12 +25,22 @@ function addMsg(that, type, msg, avatar, sugList=[], relTitle="常见问题（�
   }
   let newMsg = that.data.msgList;
   newMsg.push(info)
-  that.setData({
-    inputValue: '',
-    msgList: newMsg,
-    scrollTop: that.data.scrollTop + 1000,
-    autowordList:[]
-  })
+  if (sh == 100) {
+    console.log("dd")
+    that.setData({
+      msgList: newMsg,
+      scrollTop: that.data.scrollTop + sh,
+      autowordList: []
+    })
+  } else {
+    that.setData({
+      inputValue: '',
+      msgList: newMsg,
+      scrollTop: that.data.scrollTop + sh,
+      autowordList: []
+    })
+
+  }
 }
 
 module.exports = {

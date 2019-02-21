@@ -6,7 +6,8 @@
     "example/mem/mem",
     "example/mem/one",
     "example/org/org",
-    "example/org/one"
+    "example/org/one",
+    "example/org/map"
   ],
   "window": {
     "navigationBarTextStyle": "black",

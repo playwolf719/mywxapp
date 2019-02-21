@@ -12,7 +12,7 @@ Page({
     ],
     autowordList: [],
     inputValue: '',
-    scrollTop: 600
+    scrollTop: 100
   },
 
   /**
@@ -35,7 +35,7 @@ Page({
 url:app.globalData.url_pre+'/often_question',
       success: function (res) {
         let rd = res.data.data;
-        util.addMsg(that, "club", rd.answer, app.globalData.club_avatar,rd.question_list)
+        util.addMsg(that, "club", rd.answer, app.globalData.club_avatar, rd.question_list, "常见问题（点击发问）",100)
       }
     })
   },
