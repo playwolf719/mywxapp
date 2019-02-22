@@ -2,44 +2,35 @@
 const app = getApp()
 Page({
   data: {
-    list: [
+    elements: [
       {
-        id: 'chat',
-        name: '智能问答',
-        open: false,
-        img_url: 'images/icon_nav_search.png'
+        title: '简易问答',
+        name: 'QA',
+        color: 'cyan',
+        icon: 'messagefill',
+        url:"chat/chat"
       },
       {
-        id: 'mem',
-        name: '成员列表',
-        open: false,
-        img_url: 'images/icon_nav_form.png'
+        title: '成员列表',
+        name: 'member',
+        color: 'mauve',
+        icon: 'myfill',
+        url:"mem/mem"
       },
       {
-        id: 'org',
-        name: '机构列表',
-        open: false,
-        img_url: 'images/icon_nav_form.png'
+        title: '机构列表',
+        name: 'organization',
+        color: 'green',
+        icon: 'copy',
+        url: "mem/mem"
       },
       {
-        id: 'help',
-        name: '问题反馈',
-        open: false,
-        img_url: 'images/icon_nav_form.png'
+        title: '意见反馈 ',
+        name: 'feedback',
+        color: 'red',
+        icon: 'roundcheck',
+        url: "mem/mem"
       },
     ]
-  },
-  kindToggle: function (e) {
-    var id = e.currentTarget.id, list = this.data.list;
-    for (var i = 0, len = list.length; i < len; ++i) {
-      if (list[i].id == id) {
-        list[i].open = !list[i].open
-      } else {
-        list[i].open = false
-      }
-    }
-    this.setData({
-      list: list
-    });
   }
 });

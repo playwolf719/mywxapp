@@ -1,7 +1,7 @@
 {
   "pages": [
-    "example/auth",
     "example/index",
+    "example/auth",
     "example/chat/chat",
     "example/mem/mem",
     "example/mem/one",
@@ -10,10 +10,10 @@
     "example/org/map"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#39b54a",
     "navigationBarTitleText": "乌鲁木齐伊犁商会",
-    "navigationBarBackgroundColor": "#f8f8f8",
-    "backgroundColor": "#f8f8f8"
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
   },
   "networkTimeout": {
     "request": 10000,
