@@ -8,7 +8,7 @@ Page({
         name: 'QA',
         color: 'cyan',
         icon: 'messagefill',
-        url:"chat/chat"
+        url: "chat/chat"
       },
       {
         title: '成员列表',
