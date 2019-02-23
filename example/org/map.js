@@ -1,6 +1,7 @@
 // example/org/map.js
 
 
+const app = getApp()
 var QQMapWX = require('../../lib/qqmap-wx-jssdk1.0/qqmap-wx-jssdk.js');
 // 实例化API核心类
 var qqmapsdk = new QQMapWX({
@@ -12,6 +13,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    StatusBar: app.globalData.StatusBar,
+    CustomBar: app.globalData.CustomBar,
   },
 
   /**

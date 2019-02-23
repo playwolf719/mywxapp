@@ -26,7 +26,6 @@ function addMsg(that, type, msg, avatar, sugList=[], relTitle="常见问题（�
   let newMsg = that.data.msgList;
   newMsg.push(info)
   if (sh == 100) {
-    console.log("dd")
     that.setData({
       msgList: newMsg,
       scrollTop: that.data.scrollTop + sh,

@@ -167,3 +167,19 @@ page{
     transform: translateY(0px);
   }
 }
+.my-btn{
+  margin-top:20px;
+  padding:0 3px;
+  text-align: center;
+  font-size:12px;
+  color:green;
+  border:1px solid green;
+  background:#fff;
+}
+.color-green{
+  color: green;
+}
+.border-gray{
+  border:1px solid #ccc;
+  border-style:solid none;
+}

@@ -1,1 +1,5 @@
 /* example/mem/one.wxss */
+.one-text {
+  padding: 10px;
+  font-size: 14px;
+}

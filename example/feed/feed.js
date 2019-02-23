@@ -1,4 +1,4 @@
-// example/mem/one.js
+// example/about/about.js
 const app = getApp()
 Page({
 
@@ -6,38 +6,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name: "",
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
-    attrList: [{ key: "name", chi: "姓名" }, { key: "desc", chi: "介绍" },],
-    infoDict:{},
-    hasImg:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let that = this
-    wx.request({
-      url: app.globalData.url_pre + '/ent/query',
-      data: {
-        q: options.name
-      },
-      success: function (res) {
-        let rd = res.data.data;
-        let hasImg = false
-        if ("img_url" in rd){
-          hasImg = true
-        }
-        that.setData({
-          hasImg: hasImg,
-          name: options.name,
-          infoDict:rd
-        })
-      }
-    })
-  
+
   },
 
   /**
@@ -87,13 +64,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  /**
-   * 公司简介跳转
-   */
-  // goToOrg:function(e){
-  //   wx.navigateTo({
-  //     url: '../org/one?name=' + e.currentTarget.dataset.url
-  //   })
-  // }
+  }
 })

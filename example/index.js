@@ -22,15 +22,25 @@ Page({
         name: 'organization',
         color: 'green',
         icon: 'copy',
-        url: "mem/mem"
+        url: "org/org"
       },
       {
         title: '意见反馈 ',
         name: 'feedback',
         color: 'red',
         icon: 'roundcheck',
-        url: "mem/mem"
+        url: "feed/feed"
       },
     ]
+  },
+  
+  onLoad: function (options) {
+    if (app.globalData.userInfo) {
+    }else{
+      wx.navigateTo({
+        url: 'auth'
+      })
+    }
   }
-});
+}
+);

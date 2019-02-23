@@ -1,4 +1,40 @@
 /* example/chat/chat.wxss */
+@import '/style/weui.wxss';
+
+page{
+    background-color: #F8F8F8;
+    font-size: 16px;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+.page__hd {
+    padding: 40px;
+}
+.page__bd {
+    padding-bottom: 40px;
+}
+.page__bd_spacing {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page__ft{
+    padding-bottom: 10px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.page__title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.page__desc {
+    margin-top: 5px;
+    color: #888888;
+    text-align: left;
+    font-size: 14px;
+}
 .page-body {
     display: flex;
     flex-direction: column;
@@ -11,14 +47,15 @@
     height: 600px;
 }
 
-.self,
 .friend {
     display: flex;
     padding: 10px;
     width: 94%;
 }
 
-.self {
+.myself {
+    display: flex;
+    width: 94%;
     flex-direction: row-reverse;
 }
 
@@ -108,7 +145,7 @@
     border: 1px solid #e2e2e2;
     height: 33px;
     float: left;
-    width: 65%;
+    width: 70%;
     margin-right: 5px;
     border-radius: 5px;
     background: #fff;
@@ -122,7 +159,7 @@
     line-height: 2;
     margin: 0;
     float: right;
-    margin-right: 20px;
+    margin-right: 10px;
     background: #666;
     color: #fff;
 }

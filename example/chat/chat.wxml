@@ -1,4 +1,11 @@
-<view class="container">
+<view class="cu-custom" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed none-bg text-white bg-img" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background-image:url(https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg);">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='icon-back'>首页</text>
+    </navigator>
+  </view>
+</view>
+<view class="container" style="top:{{CustomBar}}px;">
   <view class="page-body">
     <scroll-view class="msg-list" enable-back-to-top scroll-y="true" scroll-top="{{scrollTop}}">
       <view wx:for="{{msgList}}"  wx:key="$index">
@@ -20,7 +27,7 @@
           </view>
          </view>
         </view>
-        <view wx:else class="self">
+        <view wx:else class="myself">
          <view> <image class="avatar" src="{{item.avatar}}" /></view>
          <view class="triangle">
           <view class="b-triangle s-b-triangle"></view>

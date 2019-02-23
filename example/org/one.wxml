@@ -1,88 +1,102 @@
 <!--example/mem/one.wxml-->
+<view class="cu-custom" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed none-bg text-white bg-img" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background-image:url(https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg);">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='icon-back'>上一页</text>
+    </navigator>
+  </view>
+</view>
 
-<view class="page">
-  <!-- <view class="page__hd">
-      <view class="page__title">{{infoDict["name"]}}</view>
-  </view> -->
-  <view class="page__bd">
-    <view class="weui-tab">
-      <view class="weui-navbar">
-          <block wx:for="{{tabs}}" wx:key="*this">
-              <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
-                  <view class="weui-navbar__title">{{item}}</view>
-              </view>
-          </block>
-          <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
-      </view>
-      <view class="weui-tab__panel">
-        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-          <!-- <templ  infoDict="{{infoDict}}" /> -->
-          <view class="weui-article">
-            <view class="weui-article__h1">{{ infoDict['name'] }}</view>
-            <view class="weui-article__section" wx:if="{{ infoDict['desc'] }}">
-              <view class="weui-article__title">介绍</view>
-              <view class="weui-article__p">
-                  {{ infoDict['desc'] }}
-              </view>
-            </view>
+<view class="cu-card case " style="top:{{CustomBar}}px;">
+  <view class="cu-item shadow">
+    <view class="page">
+      <!-- <view class="page__hd">
+          <view class="page__title">{{infoDict["name"]}}</view>
+      </view> -->
+      <view class="page__bd">
+        <view class="weui-tab">
+          <view class="weui-navbar">
+              <block wx:for="{{tabs}}" wx:key="*this">
+                  <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                      <view class="weui-navbar__title">{{item}}</view>
+                  </view>
+              </block>
+              <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+          </view>
+          <view class="weui-tab__panel">
+            <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+              <!-- <templ  infoDict="{{infoDict}}" /> -->
+              <view class="weui-article">
+                <view class="weui-article__h1">{{ infoDict['name'] }}</view>
+                <view class="weui-article__section" wx:if="{{ infoDict['desc'] }}">
+                  <view class="weui-article__title">介绍</view>
+                  <view class="weui-article__p">
+                      {{ infoDict['desc'] }}
+                  </view>
+                </view>
 
-            <view wx:if="{{ infoDict['address'] }}" class="weui-article__section" >
-              <view class="weui-article__title">地址</view>
-              <view class="weui-article__p" >
-                <navigator url="map?addr={{ infoDict['address'] }}" class="weui-cell weui-cell_access" >
-                  <view class="weui-cell__bd">{{ infoDict['address'] }}</view>
-                  <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                </navigator>
-              </view>
-            </view>
-          
-            <view wx:if="{{infoDict['rel_staff']}}" class="weui-article__section" >
+                <view wx:if="{{ infoDict['address'] }}" class="weui-article__section" >
+                  <view class="weui-article__title">地址</view>
+                  <view class="weui-article__p" >
+                    <navigator url="map?addr={{ infoDict['address'] }}" class="weui-cell weui-cell_access" >
+                      <view class="weui-cell__bd">{{ infoDict['address'] }}</view>
+                      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                    </navigator>
+                  </view>
+                </view>
               
-              <view class="weui-article__title">相关人员</view>
-              <view class="weui-article__p" wx:for="{{infoDict['rel_staff']}}" wx:key="*this">
-                <navigator url="../mem/one?name={{ item }}" class="weui-cell weui-cell_access" >
-                    <view class="weui-cell__bd">{{ item }}</view>
-                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                </navigator>
+                <view wx:if="{{infoDict['rel_staff']}}" class="weui-article__section" >
+                  
+                  <view class="weui-article__title">相关人员</view>
+                  <view class="weui-article__p" wx:for="{{infoDict['rel_staff']}}" wx:key="*this">
+                    <navigator url="../mem/one?name={{ item }}" class="weui-cell weui-cell_access" >
+                        <view class="weui-cell__bd">{{ item }}</view>
+                        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                    </navigator>
+                    <!-- <button data-url="{{item}}" bindtap="goToOrg" class="my-btn">
+                      {{ item }}
+                    </button> -->
+                  </view>
+                </view>
+
+                <view class="weui-article__section" >
+                  <view class="weui-btn-area" wx:if="{{ infoDict['contact_info'] }}" >
+                      <button type="primary" bindtap="open" data-pn="{{ infoDict['contact_info'] }}">联系电话</button>
+                  </view>
+                </view>
+
               </view>
             </view>
 
-            <view class="weui-article__section" >
-              <view class="weui-btn-area" wx:if="{{ infoDict['contact_info'] }}" >
-                  <button type="primary" bindtap="open" data-pn="{{ infoDict['contact_info'] }}">联系电话</button>
+            <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+              <view wx:for="{{workList}}" wx:key="unique">
+              
+                <view class="weui-cells__title">{{ item["name"] }}</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell">
+                        <view class="weui-cell__bd">类型</view>
+                        <view class="weui-cell__ft">{{ item["type"] }}</view>
+                    </view>
+                </view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell">
+                        <view class="weui-cell__bd">中标价</view>
+                        <view class="weui-cell__ft">{{ item["price"] }}</view>
+                    </view>
+                </view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell">
+                        <view class="weui-cell__bd">日期</view>
+                        <view class="weui-cell__ft">{{ item["date"] }}</view>
+                    </view>
+                </view>
+
               </view>
+
             </view>
 
           </view>
         </view>
-
-        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-          <view wx:for="{{workList}}" wx:key="*this">
-          
-            <view class="weui-cells__title">{{ item["name"] }}</view>
-            <view class="weui-cells weui-cells_after-title">
-                <view class="weui-cell">
-                    <view class="weui-cell__bd">类型</view>
-                    <view class="weui-cell__ft">{{ item["type"] }}</view>
-                </view>
-            </view>
-            <view class="weui-cells weui-cells_after-title">
-                <view class="weui-cell">
-                    <view class="weui-cell__bd">中标价</view>
-                    <view class="weui-cell__ft">{{ item["price"] }}</view>
-                </view>
-            </view>
-            <view class="weui-cells weui-cells_after-title">
-                <view class="weui-cell">
-                    <view class="weui-cell__bd">日期</view>
-                    <view class="weui-cell__ft">{{ item["date"] }}</view>
-                </view>
-            </view>
-
-          </view>
-
-        </view>
-
       </view>
     </view>
   </view>

@@ -1,0 +1,21 @@
+<!--example/about/about.wxml-->
+<view class="cu-custom" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed none-bg text-white bg-img" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background-image:url(https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg);">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='icon-back'>上一页</text>
+    </navigator>
+  </view>
+</view>
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg' style="top:{{CustomBar}}px;">
+  <view class='text-center margin-bottom text-lg  text-grey'>关于商会小程序</view>
+  <view class='text-content'>
+    <view class='margin-top-sm'>该项目是作者利用业余时间开发的一款微信小程序，希望能够促进商会成员之间的信息交流，同时为想了解乌鲁木齐伊犁商会的朋友们提供一个信息平台。</view>
+      <view class='margin-top-sm'>测试版小程序里的信息主要来源于商会手册。若有文字、图片等校对问题，欢迎您发邮件斧正。</view>
+      <view class='margin-top-sm'>另外，若您有更好的意见、建议或其他需求，也可发邮件联系作者。测试版小程序完成仓促，考虑不周之处，还请多多指教。</view>
+      <view class='margin-top-sm'></view>
+      <view class='margin-top-sm'>作者：阿邓</view>  
+      <view class='margin-top-sm'>微信：playwolf719</view>
+      <view class='margin-top-sm'>邮箱：playwolf719@163.com</view>   
+  </view>
+</view>

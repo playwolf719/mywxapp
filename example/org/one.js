@@ -9,7 +9,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name:"",
+    name: "",
+    StatusBar: app.globalData.StatusBar,
+    CustomBar: app.globalData.CustomBar,
     attrList: [{ key: "name", chi: "姓名" }, { key: "desc", chi: "介绍" },],
     infoDict:{},
     hasImg:false,
@@ -70,7 +72,7 @@ Page({
         },
         success: function (res) {
           let rd = res.data.data;
-          console.log(rd)
+          // console.log(rd)
           that.setData({
             workList: rd.work_list
           })

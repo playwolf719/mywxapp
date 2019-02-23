@@ -1,4 +1,10 @@
-<!--pages/alphabetical/alphabetical.wxml-->
+<view class="cu-custom" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed none-bg text-white bg-img" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background-image:url(https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg);">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='icon-back'>首页</text>
+    </navigator>
+  </view>
+</view>
 <scroll-view scroll-y style="height: {{windowHeight}}" scroll-into-view="{{alpha}}">
   <view class="alphabet">
     <view class="alphabet-list">
